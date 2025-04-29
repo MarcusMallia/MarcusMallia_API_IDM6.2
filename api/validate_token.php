@@ -2,31 +2,32 @@
 function validateToken() {
     $secret_key = "my_super_secret_key";
 
-    if (!isset($_SERVER['HTTP_AUTHORIZATION'])) {
+    $headers = getallheaders();
+
+    if (!isset($headers['X-Access-Token'])) {
         http_response_code(401);
-        echo json_encode(["message" => "Authorization header missing."]);
+        echo json_encode(["message" => "X-Access-Token header missing."]);
         exit;
     }
 
-    // Extract Bearer token
-    $authHeader = $_SERVER['HTTP_AUTHORIZATION'];
+    $authHeader = $headers['X-Access-Token'];
+
     if (preg_match('/Bearer\s(\S+)/', $authHeader, $matches)) {
         $token = $matches[1];
     } else {
         http_response_code(401);
-        echo json_encode(["message" => "Invalid authorization header format."]);
+        echo json_encode(["message" => "Invalid token format."]);
         exit;
     }
 
-    // Decode token
-    $decoded = base64_decode($token);
+    $decoded = base64_decode($token, true);
+
     if (!$decoded) {
         http_response_code(401);
         echo json_encode(["message" => "Invalid token."]);
         exit;
     }
 
-    // Check token structure
     $parts = explode(':', $decoded);
     if (count($parts) !== 2 || $parts[1] !== $secret_key) {
         http_response_code(401);
@@ -34,7 +35,6 @@ function validateToken() {
         exit;
     }
 
-    // Return the user_id from token
-    return $parts[0];
+    return $parts[0]; // user_id
 }
 ?>

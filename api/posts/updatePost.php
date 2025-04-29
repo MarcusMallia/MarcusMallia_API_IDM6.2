@@ -1,4 +1,9 @@
 <?php
+
+require_once '../../api/validate_token.php';
+
+// Validate token
+$user_id = validateToken();
 // Allow access from any origin (CORS policy)
 header("Access-Control-Allow-Origin: *");
 header("Content-Type: application/json; charset=UTF-8");
