@@ -53,4 +53,19 @@ if (!empty($data->email) && !empty($data->password)) {
     http_response_code(400); // Bad Request
     echo json_encode(["message" => "Email and password required."]);
 }
+
+// Generate token
+$secret_key = "my_super_secret_key"; // You can change this key to anything more complex
+$token_data = $row['user_id'] . ":" . $secret_key;
+$token = base64_encode($token_data);
+
+// Return JSON with token
+http_response_code(200); // OK
+echo json_encode([
+    "message" => "Login successful.",
+    "token" => $token,
+    "user_id" => $row['user_id'],
+    "username" => $row['username'],
+    "email" => $row['email']
+]);
 ?>
