@@ -1,0 +1,500 @@
+{
+	"info": {
+		"_postman_id": "73b78312-8c1f-4b6d-aa90-f3730b8a09bd",
+		"name": "SpeakeasySounds API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "41844321"
+	},
+	"item": [
+		{
+			"name": "Posts",
+			"item": [
+				{
+					"name": "Get Single Post",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8888/MarcusMallia_API_IDM6.2/api/posts/getSinglePost.php?id=15",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"MarcusMallia_API_IDM6.2",
+								"api",
+								"posts",
+								"getSinglePost.php"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "15"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get All Posts",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8888/MarcusMallia_API_IDM6.2/api/posts/getAllPosts.php",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"MarcusMallia_API_IDM6.2",
+								"api",
+								"posts",
+								"getAllPosts.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create New Post",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Access-Token",
+								"value": "Bearer MTg6bXlfc3VwZXJfc2VjcmV0X2tleQ==",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"user_id\": 20,\n  \"content\": \"Testing secured post creation.\",\n  \"link\": \"https://open.spotify.com/test\",\n  \"title\": \"New Test Post\",\n  \"tags\": \"testing\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8888/MarcusMallia_API_IDM6.2/api/posts/createPost.php",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"MarcusMallia_API_IDM6.2",
+								"api",
+								"posts",
+								"createPost.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Post",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "PATCH",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer MTg6bXlfc3VwZXJfc2VjcmV0X2tleQ==",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"post_id\": 19,\n    \"content\": \"Updated content through secured API!\",\n    \"link\": \"https://open.spotify.com/track/newlink\",\n    \"title\": \"Updated Title Secure\",\n    \"tags\": \"updated,test\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8888/MarcusMallia_API_IDM6.2/api/posts/updatePost.php",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"MarcusMallia_API_IDM6.2",
+								"api",
+								"posts",
+								"updatePost.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Post",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer MTg6bXlfc3VwZXJfc2VjcmV0X2tleQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"post_id\": 3\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8888/MarcusMallia_API_IDM6.2/api/posts/deletePost.php",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"MarcusMallia_API_IDM6.2",
+								"api",
+								"posts",
+								"deletePost.php"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Register User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"WuTangKilla\",\n    \"email\": \"theoneandonly@email.com\",\n    \"password\": \"securestpassword123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8888/MarcusMallia_API_IDM6.2/api/users/registerUser.php",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"MarcusMallia_API_IDM6.2",
+								"api",
+								"users",
+								"registerUser.php"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login User",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"newuser123@email.com\",\n    \"password\": \"securepassword123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8888/MarcusMallia_API_IDM6.2/api/users/loginUser.php",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"MarcusMallia_API_IDM6.2",
+								"api",
+								"users",
+								"loginUser.php"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "External",
+			"item": [
+				{
+					"name": "Search Spotify Track",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8888/MarcusMallia_API_IDM6.2/api/external/searchSpotifyTrack.php?query=kendrick",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"MarcusMallia_API_IDM6.2",
+								"api",
+								"external",
+								"searchSpotifyTrack.php"
+							],
+							"query": [
+								{
+									"key": "query",
+									"value": "kendrick"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "kendrick",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8888/MarcusMallia_API_IDM6.2/api/external/searchSpotifyTrack.php?query=kendrick",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8888",
+									"path": [
+										"MarcusMallia_API_IDM6.2",
+										"api",
+										"external",
+										"searchSpotifyTrack.php"
+									],
+									"query": [
+										{
+											"key": "query",
+											"value": "kendrick"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 29 Apr 2025 19:19:57 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.62 (Unix) OpenSSL/1.1.1w mod_fastcgi/mod_fastcgi-SNAP-0910052141"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.14"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=UTF-8"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"track_name\": \"Not Like Us\",\n        \"artist\": \"Kendrick Lamar\",\n        \"album\": \"Not Like Us\",\n        \"preview_url\": null,\n        \"spotify_url\": \"https://open.spotify.com/track/6AI3ezQ4o3HUoP6Dhudph3\"\n    },\n    {\n        \"track_name\": \"luther (with sza)\",\n        \"artist\": \"Kendrick Lamar\",\n        \"album\": \"GNX\",\n        \"preview_url\": null,\n        \"spotify_url\": \"https://open.spotify.com/track/45J4avUb9Ni0bnETYaYFVJ\"\n    },\n    {\n        \"track_name\": \"luther (with sza)\",\n        \"artist\": \"Kendrick Lamar\",\n        \"album\": \"GNX\",\n        \"preview_url\": null,\n        \"spotify_url\": \"https://open.spotify.com/track/2CGNAOSuO1MEFCbBRgUzjd\"\n    },\n    {\n        \"track_name\": \"peekaboo (feat. azchike)\",\n        \"artist\": \"Kendrick Lamar\",\n        \"album\": \"GNX\",\n        \"preview_url\": null,\n        \"spotify_url\": \"https://open.spotify.com/track/2Uts1QFB4u2YNIMiqcb4de\"\n    }\n]"
+						},
+						{
+							"name": "tyler",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8888/MarcusMallia_API_IDM6.2/api/external/searchSpotifyTrack.php?query=tyler",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8888",
+									"path": [
+										"MarcusMallia_API_IDM6.2",
+										"api",
+										"external",
+										"searchSpotifyTrack.php"
+									],
+									"query": [
+										{
+											"key": "query",
+											"value": "tyler"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 29 Apr 2025 19:31:11 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.62 (Unix) OpenSSL/1.1.1w mod_fastcgi/mod_fastcgi-SNAP-0910052141"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.14"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=UTF-8"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"track_name\": \"See You Again (feat. Kali Uchis)\",\n        \"artist\": \"Tyler, The Creator\",\n        \"album\": \"Flower Boy\",\n        \"preview_url\": null,\n        \"spotify_url\": \"https://open.spotify.com/track/7KA4W4McWYRpgf0fWsJZWB\"\n    },\n    {\n        \"track_name\": \"Like Him (feat. Lola Young)\",\n        \"artist\": \"Tyler, The Creator\",\n        \"album\": \"CHROMAKOPIA\",\n        \"preview_url\": null,\n        \"spotify_url\": \"https://open.spotify.com/track/6jbYpRPTEFl1HFKHk1IC0m\"\n    },\n    {\n        \"track_name\": \"ARE WE STILL FRIENDS?\",\n        \"artist\": \"Tyler, The Creator\",\n        \"album\": \"IGOR\",\n        \"preview_url\": null,\n        \"spotify_url\": \"https://open.spotify.com/track/5TxRUOsGeWeRl3xOML59Ai\"\n    },\n    {\n        \"track_name\": \"She\",\n        \"artist\": \"Tyler, The Creator\",\n        \"album\": \"Goblin\",\n        \"preview_url\": null,\n        \"spotify_url\": \"https://open.spotify.com/track/5WzfCu5fhgm7jv896EN1Md\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Suggest Spotify Tracks by Tags",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "lofi,chill",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8888/MarcusMallia_API_IDM6.2/api/external/suggestTracksByTags.php?tags=lofi,chill",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8888",
+									"path": [
+										"MarcusMallia_API_IDM6.2",
+										"api",
+										"external",
+										"suggestTracksByTags.php"
+									],
+									"query": [
+										{
+											"key": "tags",
+											"value": "lofi,chill"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 29 Apr 2025 19:34:51 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.62 (Unix) OpenSSL/1.1.1w mod_fastcgi/mod_fastcgi-SNAP-0910052141"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.14"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=UTF-8"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"track_name\": \"LoFi Chill\",\n        \"artist\": \"Lofi Sleep Chill & Study\",\n        \"album\": \"LoFi Beats To Study To\",\n        \"spotify_url\": \"https://open.spotify.com/track/2K6wrt7ZioOcElW1U2BORI\",\n        \"preview_url\": null\n    },\n    {\n        \"track_name\": \"Lofi Chill Music For Party\",\n        \"artist\": \"a girl and a cat\",\n        \"album\": \"Chill Lo Fi Hip Hop Study Music For Concentration & Focus\",\n        \"spotify_url\": \"https://open.spotify.com/track/1tDNTx6fQgt1RrOHDVQtWT\",\n        \"preview_url\": null\n    },\n    {\n        \"track_name\": \"SoFi\",\n        \"artist\": \"Glozone\",\n        \"album\": \"SoFi\",\n        \"spotify_url\": \"https://open.spotify.com/track/00ZXkrMBoVMBMXgVOz8nWX\",\n        \"preview_url\": null\n    },\n    {\n        \"track_name\": \"LoFi Chill\",\n        \"artist\": \"Project Blue Sun\",\n        \"album\": \"LoFi Chill\",\n        \"spotify_url\": \"https://open.spotify.com/track/3JtwIZHxlJ9Hs5CgOGcNY5\",\n        \"preview_url\": null\n    },\n    {\n        \"track_name\": \"Up In The Clouds Again\",\n        \"artist\": \"astra division\",\n        \"album\": \"Up In The Clouds Again\",\n        \"spotify_url\": \"https://open.spotify.com/track/5UkHAPnb2Vyx0DvOmnBklI\",\n        \"preview_url\": null\n    }\n]"
+						}
+					]
+				}
+			]
+		}
+	]
+}
