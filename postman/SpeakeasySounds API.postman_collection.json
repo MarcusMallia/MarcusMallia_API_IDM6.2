@@ -35,7 +35,158 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "200 Get Single Post",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8888/MarcusMallia_API_IDM6.2/api/posts/getSinglePost.php?id=15",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8888",
+									"path": [
+										"MarcusMallia_API_IDM6.2",
+										"api",
+										"posts",
+										"getSinglePost.php"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "15"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 29 Apr 2025 14:44:36 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.62 (Unix) OpenSSL/1.1.1w mod_fastcgi/mod_fastcgi-SNAP-0910052141"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.14"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=UTF-8"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"post_id\": 15,\n    \"user_id\": 13,\n    \"content\": \"Banging house song, Bayside always gets me up in the morning!\",\n    \"link\": \"https://open.spotify.com/track/7hYW4hKuPkfaLbzTpg9hQB?si=e4da5639a2ce4e97\",\n    \"created_at\": \"2024-06-05 13:34:25\",\n    \"updated_at\": \"2024-06-05 13:34:25\",\n    \"title\": \"Bayside - Radio Edit: Obskur\",\n    \"tags\": null\n}"
+						},
+						{
+							"name": "404 Post not found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8888/MarcusMallia_API_IDM6.2/api/posts/getSinglePost.php?id=100",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8888",
+									"path": [
+										"MarcusMallia_API_IDM6.2",
+										"api",
+										"posts",
+										"getSinglePost.php"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "100"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 03 May 2025 10:36:04 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.62 (Unix) OpenSSL/1.1.1w mod_fastcgi/mod_fastcgi-SNAP-0910052141"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.14"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=99"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=UTF-8"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Post not found.\"\n}"
+						}
+					]
 				},
 				{
 					"name": "Get All Posts",
@@ -57,7 +208,68 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "202 Get All Posts",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8888/MarcusMallia_API_IDM6.2/api/posts/getAllPosts.php",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8888",
+									"path": [
+										"MarcusMallia_API_IDM6.2",
+										"api",
+										"posts",
+										"getAllPosts.php"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 29 Apr 2025 14:31:16 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.62 (Unix) OpenSSL/1.1.1w mod_fastcgi/mod_fastcgi-SNAP-0910052141"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.14"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=UTF-8"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"post_id\": 18,\n        \"user_id\": 12,\n        \"content\": \"Berlioz always supplying the goodness and those jazzy vibes heres one of my personal favourites, hot house.\",\n        \"link\": \"https://open.spotify.com/track/2Fk1WNNBK7If8eRUDwlja0\",\n        \"created_at\": \"2024-06-05 13:45:54\",\n        \"updated_at\": \"2024-06-05 13:45:54\",\n        \"title\": \"Hot House\",\n        \"tags\": null\n    },\n    {\n        \"post_id\": 17,\n        \"user_id\": 14,\n        \"content\": \"YES YOU CAN! Spending this beautiful day with some chill tribe called quest featuring J.Cole. Kicking it back.\",\n        \"link\": \"https://open.spotify.com/track/0GmhAVyyHwaX6jfCbPmaoB?si=16a00845c34e4bd7\",\n        \"created_at\": \"2024-06-05 13:42:04\",\n        \"updated_at\": \"2024-06-05 13:42:04\",\n        \"title\": \"CAN I KICK IT?\",\n        \"tags\": null\n    },\n    {\n        \"post_id\": 16,\n        \"user_id\": 14,\n        \"content\": \"Hey Everyone!\\r\\nHeres my hype rap playlists called Menace 2 Society.\\r\\nHope you enjoy!\\r\\nComment any songs you think i should add.\",\n        \"link\": \"https://open.spotify.com/playlist/4Ba1KJAEPdu4JjTyMJ8wbX?si=7317ca1c533442f3\",\n        \"created_at\": \"2024-06-05 13:39:00\",\n        \"updated_at\": \"2024-06-05 13:39:00\",\n        \"title\": \"Gangsta Rap Playlist\",\n        \"tags\": null\n    },\n    {\n        \"post_id\": 15,\n        \"user_id\": 13,\n        \"content\": \"Banging house song, Bayside always gets me up in the morning!\",\n        \"link\": \"https://open.spotify.com/track/7hYW4hKuPkfaLbzTpg9hQB?si=e4da5639a2ce4e97\",\n        \"created_at\": \"2024-06-05 13:34:25\",\n        \"updated_at\": \"2024-06-05 13:34:25\",\n        \"title\": \"Bayside - Radio Edit: Obskur\",\n        \"tags\": null\n    }\n]"
+						}
+					]
 				},
 				{
 					"name": "Create New Post",
@@ -97,7 +309,91 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "201 Post created success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "X-Access-Token",
+										"value": "Bearer MTg6bXlfc3VwZXJfc2VjcmV0X2tleQ==",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"user_id\": 18,\n  \"content\": \"This is a secure test post 2.\",\n  \"link\": \"https://open.spotify.com/track/xyzw\",\n  \"title\": \"Secure Post Test2\",\n  \"tags\": \"test,api\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8888/MarcusMallia_API_IDM6.2/api/posts/createPost.php",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8888",
+									"path": [
+										"MarcusMallia_API_IDM6.2",
+										"api",
+										"posts",
+										"createPost.php"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 03 May 2025 09:26:45 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.62 (Unix) OpenSSL/1.1.1w mod_fastcgi/mod_fastcgi-SNAP-0910052141"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.14"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "POST"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=UTF-8"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Post created successfully.\"\n}"
+						}
+					]
 				},
 				{
 					"name": "Update Post",
@@ -137,7 +433,91 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "200 Post Update Success",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "X-Access-Token",
+										"value": "Bearer MTg6bXlfc3VwZXJfc2VjcmV0X2tleQ==",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"post_id\": 27,\n  \"content\": \"UPDATED content via secure API ✅\",\n  \"link\": \"https://open.spotify.com/track/updated\",\n  \"title\": \"Updated Post Title\",\n  \"tags\": \"updated,secure\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8888/MarcusMallia_API_IDM6.2/api/posts/updatePost.php",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8888",
+									"path": [
+										"MarcusMallia_API_IDM6.2",
+										"api",
+										"posts",
+										"updatePost.php"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 29 Apr 2025 18:54:13 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.62 (Unix) OpenSSL/1.1.1w mod_fastcgi/mod_fastcgi-SNAP-0910052141"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.14"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "PATCH"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=UTF-8"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Post updated successfully.\"\n}"
+						}
+					]
 				},
 				{
 					"name": "Delete Post",
@@ -184,7 +564,116 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "200 Post Delete Success",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "",
+										"value": "18",
+										"type": "text"
+									},
+									{
+										"key": "content",
+										"value": "This is a secure test post.",
+										"type": "text"
+									},
+									{
+										"key": "link",
+										"value": "https://open.spotify.com/track/xyz",
+										"type": "text"
+									},
+									{
+										"key": "title",
+										"value": "Secure Post Test",
+										"type": "text"
+									},
+									{
+										"key": "tags",
+										"value": "test,api",
+										"type": "text"
+									},
+									{
+										"key": "X-Access-Token",
+										"value": "Bearer MTg6bXlfc3VwZXJfc2VjcmV0X2tleQ",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"post_id\": 27\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8888/MarcusMallia_API_IDM6.2/api/posts/deletePost.php",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8888",
+									"path": [
+										"MarcusMallia_API_IDM6.2",
+										"api",
+										"posts",
+										"deletePost.php"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Tue, 29 Apr 2025 18:54:44 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.62 (Unix) OpenSSL/1.1.1w mod_fastcgi/mod_fastcgi-SNAP-0910052141"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.14"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=99"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=UTF-8"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Post deleted successfully.\"\n}"
+						}
+					]
 				}
 			]
 		},
@@ -198,7 +687,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"username\": \"WuTangKilla\",\n    \"email\": \"theoneandonly@email.com\",\n    \"password\": \"securestpassword123\"\n}",
+							"raw": "{\n  \"username\": \"TestUser123\",\n  \"email\": \"testuser@email.com\",\n  \"password\": \"testpass123\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -220,7 +709,85 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "201 Register User Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"username\": \"TestUser123\",\n  \"email\": \"testuser@email.com\",\n  \"password\": \"testpass123\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8888/MarcusMallia_API_IDM6.2/api/users/registerUser.php",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8888",
+									"path": [
+										"MarcusMallia_API_IDM6.2",
+										"api",
+										"users",
+										"registerUser.php"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 03 May 2025 09:21:48 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.62 (Unix) OpenSSL/1.1.1w mod_fastcgi/mod_fastcgi-SNAP-0910052141"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.14"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "POST"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=UTF-8"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"User registered successfully.\"\n}"
+						}
+					]
 				},
 				{
 					"name": "Login User",
@@ -229,7 +796,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"email\": \"newuser123@email.com\",\n    \"password\": \"securepassword123\"\n}",
+							"raw": "{\n  \"email\": \"testuser@email.com\",\n  \"password\": \"testpass123\"\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -251,7 +818,85 @@
 							]
 						}
 					},
-					"response": []
+					"response": [
+						{
+							"name": "200 Login User Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"email\": \"testuser@email.com\",\n  \"password\": \"testpass123\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8888/MarcusMallia_API_IDM6.2/api/users/loginUser.php",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8888",
+									"path": [
+										"MarcusMallia_API_IDM6.2",
+										"api",
+										"users",
+										"loginUser.php"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 03 May 2025 09:23:27 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.62 (Unix) OpenSSL/1.1.1w mod_fastcgi/mod_fastcgi-SNAP-0910052141"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.14"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "POST"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=UTF-8"
+								}
+							],
+							"cookie": [],
+							"body": "{\"message\":\"Login successful.\",\"user_id\":19,\"username\":\"TestUser123\",\"email\":\"testuser@email.com\"}{\"message\":\"Login successful.\",\"token\":\"MTk6bXlfc3VwZXJfc2VjcmV0X2tleQ==\",\"user_id\":19,\"username\":\"TestUser123\",\"email\":\"testuser@email.com\"}"
+						}
+					]
 				}
 			]
 		},
@@ -264,7 +909,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:8888/MarcusMallia_API_IDM6.2/api/external/searchSpotifyTrack.php?query=kendrick",
+							"raw": "http://localhost:8888/MarcusMallia_API_IDM6.2/api/external/searchSpotifyTrack.php?query=tyler",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -279,14 +924,14 @@
 							"query": [
 								{
 									"key": "query",
-									"value": "kendrick"
+									"value": "tyler"
 								}
 							]
 						}
 					},
 					"response": [
 						{
-							"name": "kendrick",
+							"name": "Kendrick search",
 							"originalRequest": {
 								"method": "GET",
 								"header": [],
@@ -352,7 +997,7 @@
 							"body": "[\n    {\n        \"track_name\": \"Not Like Us\",\n        \"artist\": \"Kendrick Lamar\",\n        \"album\": \"Not Like Us\",\n        \"preview_url\": null,\n        \"spotify_url\": \"https://open.spotify.com/track/6AI3ezQ4o3HUoP6Dhudph3\"\n    },\n    {\n        \"track_name\": \"luther (with sza)\",\n        \"artist\": \"Kendrick Lamar\",\n        \"album\": \"GNX\",\n        \"preview_url\": null,\n        \"spotify_url\": \"https://open.spotify.com/track/45J4avUb9Ni0bnETYaYFVJ\"\n    },\n    {\n        \"track_name\": \"luther (with sza)\",\n        \"artist\": \"Kendrick Lamar\",\n        \"album\": \"GNX\",\n        \"preview_url\": null,\n        \"spotify_url\": \"https://open.spotify.com/track/2CGNAOSuO1MEFCbBRgUzjd\"\n    },\n    {\n        \"track_name\": \"peekaboo (feat. azchike)\",\n        \"artist\": \"Kendrick Lamar\",\n        \"album\": \"GNX\",\n        \"preview_url\": null,\n        \"spotify_url\": \"https://open.spotify.com/track/2Uts1QFB4u2YNIMiqcb4de\"\n    }\n]"
 						},
 						{
-							"name": "tyler",
+							"name": "tyler search",
 							"originalRequest": {
 								"method": "GET",
 								"header": [],
@@ -427,7 +1072,7 @@
 					},
 					"response": [
 						{
-							"name": "lofi,chill",
+							"name": "lofi,chill tags",
 							"originalRequest": {
 								"method": "GET",
 								"header": [],
@@ -491,6 +1136,1300 @@
 							],
 							"cookie": [],
 							"body": "[\n    {\n        \"track_name\": \"LoFi Chill\",\n        \"artist\": \"Lofi Sleep Chill & Study\",\n        \"album\": \"LoFi Beats To Study To\",\n        \"spotify_url\": \"https://open.spotify.com/track/2K6wrt7ZioOcElW1U2BORI\",\n        \"preview_url\": null\n    },\n    {\n        \"track_name\": \"Lofi Chill Music For Party\",\n        \"artist\": \"a girl and a cat\",\n        \"album\": \"Chill Lo Fi Hip Hop Study Music For Concentration & Focus\",\n        \"spotify_url\": \"https://open.spotify.com/track/1tDNTx6fQgt1RrOHDVQtWT\",\n        \"preview_url\": null\n    },\n    {\n        \"track_name\": \"SoFi\",\n        \"artist\": \"Glozone\",\n        \"album\": \"SoFi\",\n        \"spotify_url\": \"https://open.spotify.com/track/00ZXkrMBoVMBMXgVOz8nWX\",\n        \"preview_url\": null\n    },\n    {\n        \"track_name\": \"LoFi Chill\",\n        \"artist\": \"Project Blue Sun\",\n        \"album\": \"LoFi Chill\",\n        \"spotify_url\": \"https://open.spotify.com/track/3JtwIZHxlJ9Hs5CgOGcNY5\",\n        \"preview_url\": null\n    },\n    {\n        \"track_name\": \"Up In The Clouds Again\",\n        \"artist\": \"astra division\",\n        \"album\": \"Up In The Clouds Again\",\n        \"spotify_url\": \"https://open.spotify.com/track/5UkHAPnb2Vyx0DvOmnBklI\",\n        \"preview_url\": null\n    }\n]"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Comments",
+			"item": [
+				{
+					"name": "Create New Comment",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Access-Token",
+								"value": "Bearer MTk6bXlfc3VwZXJfc2VjcmV0X2tleQ==",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"post_id\": 16,\n  \"content\": \"Testing all da comments\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8888/MarcusMallia_API_IDM6.2/api/comments/createComment.php",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"MarcusMallia_API_IDM6.2",
+								"api",
+								"comments",
+								"createComment.php"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "201 Comment Created",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "X-Access-Token",
+										"value": "Bearer MTk6bXlfc3VwZXJfc2VjcmV0X2tleQ==",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"post_id\": 16,\n  \"content\": \"This is a test comment!5\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8888/MarcusMallia_API_IDM6.2/api/comments/createComment.php",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8888",
+									"path": [
+										"MarcusMallia_API_IDM6.2",
+										"api",
+										"comments",
+										"createComment.php"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 03 May 2025 09:50:41 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.62 (Unix) OpenSSL/1.1.1w mod_fastcgi/mod_fastcgi-SNAP-0910052141"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.14"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Comment added successfully.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Comments by Post ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8888/MarcusMallia_API_IDM6.2/api/comments/getCommentsByPost.php?post_id=16",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"MarcusMallia_API_IDM6.2",
+								"api",
+								"comments",
+								"getCommentsByPost.php"
+							],
+							"query": [
+								{
+									"key": "post_id",
+									"value": "16"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 Get Comments by Post ID",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8888/MarcusMallia_API_IDM6.2/api/comments/getCommentsByPost.php?post_id=16",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8888",
+									"path": [
+										"MarcusMallia_API_IDM6.2",
+										"api",
+										"comments",
+										"getCommentsByPost.php"
+									],
+									"query": [
+										{
+											"key": "post_id",
+											"value": "16"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 03 May 2025 09:51:00 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.62 (Unix) OpenSSL/1.1.1w mod_fastcgi/mod_fastcgi-SNAP-0910052141"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.14"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"comment_id\": 16,\n        \"user_id\": 19,\n        \"username\": \"TestUser123\",\n        \"content\": \"This is a test comment!5\",\n        \"created_at\": \"2025-05-03 11:50:41\"\n    },\n    {\n        \"comment_id\": 15,\n        \"user_id\": 19,\n        \"username\": \"TestUser123\",\n        \"content\": \"This is a test comment!3\",\n        \"created_at\": \"2025-05-03 11:39:15\"\n    },\n    {\n        \"comment_id\": 12,\n        \"user_id\": 12,\n        \"username\": \"Jazzlover42\",\n        \"content\": \"How about Collard Greens by ScHoolboy Q and Kendrick i think it would fit in the playlist perfectly\",\n        \"created_at\": \"2024-06-05 13:47:10\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Delete Comment",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "X-Access-Token",
+								"value": "Bearer MTk6bXlfc3VwZXJfc2VjcmV0X2tleQ==",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"comment_id\": 15\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8888/MarcusMallia_API_IDM6.2/api/comments/deleteComment.php",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"MarcusMallia_API_IDM6.2",
+								"api",
+								"comments",
+								"deleteComment.php"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "200 Delete Comment ID 15",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "X-Access-Token",
+										"value": "Bearer MTk6bXlfc3VwZXJfc2VjcmV0X2tleQ==",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"comment_id\": 15\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8888/MarcusMallia_API_IDM6.2/api/comments/deleteComment.php",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8888",
+									"path": [
+										"MarcusMallia_API_IDM6.2",
+										"api",
+										"comments",
+										"deleteComment.php"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 03 May 2025 10:02:29 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.62 (Unix) OpenSSL/1.1.1w mod_fastcgi/mod_fastcgi-SNAP-0910052141"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.14"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Comment deleted successfully.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Comment",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "200 Update Comment",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "X-Access-Token",
+										"value": "Bearer MTk6bXlfc3VwZXJfc2VjcmV0X2tleQ==",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"comment_id\": 17,\n  \"new_content\": \"Updated my thoughts — this is fire!\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8888/MarcusMallia_API_IDM6.2/api/comments/updateComment.php",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8888",
+									"path": [
+										"MarcusMallia_API_IDM6.2",
+										"api",
+										"comments",
+										"updateComment.php"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 03 May 2025 10:11:09 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.62 (Unix) OpenSSL/1.1.1w mod_fastcgi/mod_fastcgi-SNAP-0910052141"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.14"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Comment updated successfully.\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Likes",
+			"item": [
+				{
+					"name": "Like Post",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							},
+							{
+								"key": "X-Access-Token",
+								"value": "X-Access-Token",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"post_id\": 18\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8888/MarcusMallia_API_IDM6.2/api/likes/likePost.php",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"MarcusMallia_API_IDM6.2",
+								"api",
+								"likes",
+								"likePost.php"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "201 Post Liked Sucess",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "X-Access-Token",
+										"value": "Bearer MTk6bXlfc3VwZXJfc2VjcmV0X2tleQ==",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"post_id\": 18\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8888/MarcusMallia_API_IDM6.2/api/likes/likePost.php",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8888",
+									"path": [
+										"MarcusMallia_API_IDM6.2",
+										"api",
+										"likes",
+										"likePost.php"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 03 May 2025 10:23:23 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.62 (Unix) OpenSSL/1.1.1w mod_fastcgi/mod_fastcgi-SNAP-0910052141"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.14"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Post liked successfully.\"\n}"
+						},
+						{
+							"name": "409 Duplicate Like",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									},
+									{
+										"key": "X-Access-Token",
+										"value": "Bearer MTk6bXlfc3VwZXJfc2VjcmV0X2tleQ==",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"post_id\": 18\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8888/MarcusMallia_API_IDM6.2/api/likes/likePost.php",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8888",
+									"path": [
+										"MarcusMallia_API_IDM6.2",
+										"api",
+										"likes",
+										"likePost.php"
+									]
+								}
+							},
+							"status": "Conflict",
+							"code": 409,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 03 May 2025 10:24:24 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.62 (Unix) OpenSSL/1.1.1w mod_fastcgi/mod_fastcgi-SNAP-0910052141"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.14"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"You have already liked this post.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Unlike Post",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "404 Like not found or already removed",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "X-Access-Token",
+										"value": "Bearer MTk6bXlfc3VwZXJfc2VjcmV0X2tleQ==",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"post_id\": 16\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8888/MarcusMallia_API_IDM6.2/api/likes/unlikePost.php",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8888",
+									"path": [
+										"MarcusMallia_API_IDM6.2",
+										"api",
+										"likes",
+										"unlikePost.php"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 03 May 2025 10:28:31 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.62 (Unix) OpenSSL/1.1.1w mod_fastcgi/mod_fastcgi-SNAP-0910052141"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.14"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Like not found or already removed.\"\n}"
+						},
+						{
+							"name": "200 Like removed successfully",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "X-Access-Token",
+										"value": "Bearer MTk6bXlfc3VwZXJfc2VjcmV0X2tleQ==",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"post_id\": 18\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8888/MarcusMallia_API_IDM6.2/api/likes/unlikePost.php",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8888",
+									"path": [
+										"MarcusMallia_API_IDM6.2",
+										"api",
+										"likes",
+										"unlikePost.php"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 03 May 2025 10:29:07 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.62 (Unix) OpenSSL/1.1.1w mod_fastcgi/mod_fastcgi-SNAP-0910052141"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.14"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Like removed successfully.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Likes by Post",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "202 Get likes by post ID",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8888/MarcusMallia_API_IDM6.2/api/likes/getLikesByPost.php?post_id=16",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8888",
+									"path": [
+										"MarcusMallia_API_IDM6.2",
+										"api",
+										"likes",
+										"getLikesByPost.php"
+									],
+									"query": [
+										{
+											"key": "post_id",
+											"value": "16"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 03 May 2025 10:31:21 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.62 (Unix) OpenSSL/1.1.1w mod_fastcgi/mod_fastcgi-SNAP-0910052141"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.14"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"like_id\": 40,\n        \"user_id\": 12,\n        \"username\": \"Jazzlover42\"\n    },\n    {\n        \"like_id\": 44,\n        \"user_id\": 13,\n        \"username\": \"MusicManiac\"\n    },\n    {\n        \"like_id\": 46,\n        \"user_id\": 19,\n        \"username\": \"TestUser123\"\n    }\n]"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Followers",
+			"item": [
+				{
+					"name": "Follow User",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-Access-Token",
+								"value": "Bearer MTk6bXlfc3VwZXJfc2VjcmV0X2tleQ==",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"user_id\": 14\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8888/MarcusMallia_API_IDM6.2/api/followers/followUser.php",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8888",
+							"path": [
+								"MarcusMallia_API_IDM6.2",
+								"api",
+								"followers",
+								"followUser.php"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "201 User followed",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "X-Access-Token",
+										"value": "Bearer MTk6bXlfc3VwZXJfc2VjcmV0X2tleQ==",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"user_id\": 14\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8888/MarcusMallia_API_IDM6.2/api/followers/followUser.php",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8888",
+									"path": [
+										"MarcusMallia_API_IDM6.2",
+										"api",
+										"followers",
+										"followUser.php"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 03 May 2025 11:17:24 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.62 (Unix) OpenSSL/1.1.1w mod_fastcgi/mod_fastcgi-SNAP-0910052141"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.14"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"User followed successfully.\"\n}"
+						},
+						{
+							"name": "409 Already following",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "X-Access-Token",
+										"value": "Bearer MTk6bXlfc3VwZXJfc2VjcmV0X2tleQ==",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"user_id\": 14\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8888/MarcusMallia_API_IDM6.2/api/followers/followUser.php",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8888",
+									"path": [
+										"MarcusMallia_API_IDM6.2",
+										"api",
+										"followers",
+										"followUser.php"
+									]
+								}
+							},
+							"status": "Conflict",
+							"code": 409,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 03 May 2025 11:17:58 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.62 (Unix) OpenSSL/1.1.1w mod_fastcgi/mod_fastcgi-SNAP-0910052141"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.14"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"You already follow this user.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Unfollow User",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "200 Unfollowed User",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "X-Access-Token",
+										"value": "Bearer MTk6bXlfc3VwZXJfc2VjcmV0X2tleQ==",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"user_id\": 14\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8888/MarcusMallia_API_IDM6.2/api/followers/unfollowUser.php",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8888",
+									"path": [
+										"MarcusMallia_API_IDM6.2",
+										"api",
+										"followers",
+										"unfollowUser.php"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 03 May 2025 11:20:50 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.62 (Unix) OpenSSL/1.1.1w mod_fastcgi/mod_fastcgi-SNAP-0910052141"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.14"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Unfollowed successfully.\"\n}"
+						},
+						{
+							"name": "404 Were Not Following",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "X-Access-Token",
+										"value": "Bearer MTk6bXlfc3VwZXJfc2VjcmV0X2tleQ==",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"user_id\": 14\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8888/MarcusMallia_API_IDM6.2/api/followers/unfollowUser.php",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8888",
+									"path": [
+										"MarcusMallia_API_IDM6.2",
+										"api",
+										"followers",
+										"unfollowUser.php"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 03 May 2025 11:22:16 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.62 (Unix) OpenSSL/1.1.1w mod_fastcgi/mod_fastcgi-SNAP-0910052141"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.14"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"You were not following this user.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Followers",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "Get followers User 15",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8888/MarcusMallia_API_IDM6.2/api/followers/getFollowers.php?user_id=15",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8888",
+									"path": [
+										"MarcusMallia_API_IDM6.2",
+										"api",
+										"followers",
+										"getFollowers.php"
+									],
+									"query": [
+										{
+											"key": "user_id",
+											"value": "15"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 03 May 2025 11:28:09 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.62 (Unix) OpenSSL/1.1.1w mod_fastcgi/mod_fastcgi-SNAP-0910052141"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.14"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"user_id\": 19,\n        \"username\": \"TestUser123\"\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get Following",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": [
+						{
+							"name": "Get Following User 19",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8888/MarcusMallia_API_IDM6.2/api/followers/getFollowing.php?user_id=19",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8888",
+									"path": [
+										"MarcusMallia_API_IDM6.2",
+										"api",
+										"followers",
+										"getFollowing.php"
+									],
+									"query": [
+										{
+											"key": "user_id",
+											"value": "19"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Sat, 03 May 2025 11:27:02 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "Apache/2.4.62 (Unix) OpenSSL/1.1.1w mod_fastcgi/mod_fastcgi-SNAP-0910052141"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.14"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5, max=100"
+								},
+								{
+									"key": "Connection",
+									"value": "Keep-Alive"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"following_user_id\": 15,\n        \"username\": \"NewUser123\"\n    },\n    {\n        \"following_user_id\": 14,\n        \"username\": \"RapStarr\"\n    }\n]"
 						}
 					]
 				}
