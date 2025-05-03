@@ -2,10 +2,13 @@ site_name: SpeakeasySounds API Documentation
 
 nav:
   - Home: index.md
-  - Authentication: authentication.md
-  - Posts API: posts.md
-  - Users API: users.md
-  - Spotify Integration: spotify.md
   - Setup Guide: setup.md
+  - Authentication: authentication.md
+  - Users API: users.md
+  - Posts API: posts.md
+  - Comments API: comments.md
+  - Likes API: likes.md
+  - Followers API: followers.md
+  - Spotify Integration: spotify.md
 
 theme: readthedocs
