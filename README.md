@@ -1,68 +1,75 @@
-Of course! Here’s the full README.md text for your project — clean, no emojis, no sections missing, all together, ready for professional GitHub use:
+# Speakeasy Sounds – RESTful API  
+This project is a secure, modular API backend built for **Speakeasy Sounds**, a social music-sharing platform. Built using PHP (PDO), MAMP, and Postman for testing, the API allows users to register, log in, share posts, interact via comments and likes, and follow each other.
 
-⸻
+## Folder Structure
 
-SpeakeasySounds API
+/api
+/posts
+/users
+/comments
+/likes
+/followers
+validate_token.php
+/db
+Database.phpx
 
-A RESTful PHP API backend for a music sharing platform that allows users to register, log in, upload music posts, interact with Spotify, and explore related tracks.
-Designed with future integration of frontend or mobile applications in mind.
+## Features
 
-Project Overview
-	•	Built using PHP and MySQL.
-	•	Secure token-based authentication system (via X-Access-Token header).
-	•	CRUD operations for Posts (Create, Read, Update, Delete).
-	•	External integration with the Spotify API using cURL.
-	•	Fully documented using Postman collections and MkDocs.
+### Authentication
+- Register new users
+- Secure login with Base64 token
+- Token validation middleware (`validate_token.php`)
 
-Project Structure
+### Posts
+- `GET /posts/getAllPosts.php` – Get all posts
+- `GET /posts/getPost.php?post_id={id}` – Get single post by ID
+- `POST /posts/createPost.php` – Create a new post (auth)
+- `PATCH /posts/updatePost.php` – Update own post (auth)
+- `DELETE /posts/deletePost.php` – Delete own post (auth)
 
-MarcusMallia_API_IDM6.2/
-├── api/
-│   ├── db/
-│   │   └── Database.php
-│   ├── posts/
-│   │   ├── createPost.php
-│   │   ├── deletePost.php
-│   │   ├── getAllPosts.php
-│   │   ├── getSinglePost.php
-│   │   ├── updatePost.php
-│   ├── users/
-│   │   ├── registerUser.php
-│   │   ├── loginUser.php
-│   ├── external/
-│   │   ├── searchSpotifyTrack.php
-│   │   ├── suggestTracksByTags.php
-│   └── validate_token.php
-├── postman/
-│   └── SpeakeasySounds_API_Collection.json
-├── .gitignore
-└── README.md
+### Comments
+- `POST /comments/createComment.php` – Add a comment (auth)
+- `GET /comments/getCommentsByPost.php?post_id={id}` – Get comments by post
+- `PATCH /comments/updateComment.php` – Edit own comment (auth)
+- `DELETE /comments/deleteComment.php` – Delete own comment (auth)
 
-Authentication
-	•	Login returns a token (X-Access-Token).
-	•	Token is required for:
-	•	Creating posts
-	•	Updating posts
-	•	Deleting posts
-	•	Token is validated on every protected request.
+### Likes
+- `POST /likes/likePost.php` – Like a post (auth)
+- `DELETE /likes/unlikePost.php` – Unlike a post (auth)
+- `GET /likes/getLikesByPost.php?post_id={id}` – Get likes on a post
 
-Third-Party Integration
-	•	Integrated with Spotify API via Client Credentials OAuth flow.
-	•	Track search and suggestions available through:
-	•	searchSpotifyTrack.php?query={search_term}
-	•	suggestTracksByTags.php?tags={tag1,tag2}
+### Followers
+- `POST /followers/followUser.php` – Follow another user (auth)
+- `DELETE /followers/unfollowUser.php` – Unfollow user (auth)
+- `GET /followers/getFollowers.php?user_id={id}` – Get a user's followers
+- `GET /followers/getFollowing.php?user_id={id}` – Get users a user is following
 
-Postman Collection
-	•	All endpoints are saved in /postman/SpeakeasySounds_API_Collection.json
-	•	Can be imported into Postman to test and explore the API.
+### Spotify Integration
+- `GET /spotify/searchTracks.php?q={tag}` – Search for tracks via Spotify (used for track suggestions)
 
-How to Set Up Locally
-	1.	Install MAMP or any local server.
-	2.	Import speakeasysounds_api.sql into your MySQL database.
-	3.	Clone this repo into your local server’s root directory (htdocs/ for MAMP).
-	4.	Create a spotify_config.php inside api/external/ with your own Spotify Client ID and Secret.
-	5.	Start MAMP servers.
-	6.	Access endpoints at:
-http://localhost:8888/MarcusMallia_API_IDM6.2/api/
 
+## Testing & Development
+
+- All endpoints tested using **Postman** (saved as collections)
+- Validated using real tokens
+- Token required for secure endpoints via `X-Access-Token: Bearer <token>`
+- Database structure loaded via `speakeasysounds.sql`
+
+## Documentation
+
+Full API documentation site is available using **MkDocs** in the `/docs` folder.
+
+## Tech Stack
+
+- PHP 8.3 with PDO
+- MySQL (MariaDB via MAMP)
+- Postman for REST testing
+- Git & GitHub for version control
+- MkDocs for developer documentation
+
+## Author
+
+Marcus Mallia  
+MCAST – B.A. Hons in Interactive Digital Media  
+GitHub: [MarcusMallia](https://github.com/MarcusMallia)
 
