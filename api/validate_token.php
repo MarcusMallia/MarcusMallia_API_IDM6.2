@@ -35,6 +35,11 @@ function validateToken() {
         exit;
     }
 
-    return $parts[0]; // user_id
+    $user_id = intval($parts[0]);
+
+    return [
+        "valid" => true,
+        "user_id" => $user_id
+    ];
 }
 ?>
